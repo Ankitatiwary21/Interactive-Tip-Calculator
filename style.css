@@ -1,0 +1,225 @@
+/* =========================================== */
+/*           Base Styling                      */
+/* =========================================== */
+
+/* Reset some defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f0f4f8;
+  padding: 2rem;
+  color: #333;
+}
+
+/* Main container */
+#tip-calculator-main {
+  max-width: 600px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #34495e;
+}
+
+/* Input groups */
+.input-group, .form-control {
+  margin-bottom: 1.5rem;
+}
+
+label, legend {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.input-field, input[type="number"] {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* Tip buttons */
+.tip-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tip-percent-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.tip-percent-btn:hover {
+  background-color: #27ae60;
+}
+
+.tip-custom-input {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* Output section */
+.output-section {
+  background-color: #ecf0f1;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.result-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.result-label p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.result-value span,
+.amount-display {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+/* Reset button */
+.reset-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.reset-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Visually hidden (for screen readers) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* =========================================== */
+/*           Media Queries (Responsive Design) */
+/* =========================================== */
+
+@media screen and (max-width: 600px) {
+  /* Main container */
+  .calculator-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  /* Input/output sections */
+  .inputs-section,
+  .outputs-section {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .outputs-section {
+    margin-bottom: 0;
+  }
+
+  /* Labels */
+  .input-label {
+    font-size: 0.875rem;
+    margin-bottom: 6px;
+  }
+
+  /* Inputs */
+  input[type="number"]#bill-input,
+  input[type="number"]#custom-tip-input,
+  input[type="number"]#people-input {
+    font-size: 1rem;
+    padding: 10px 12px;
+  }
+
+  /* Input group spacing */
+  .input-field-group {
+    margin-bottom: 16px;
+  }
+
+  .input-field-group:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Tip buttons */
+  .tip-percent-btn {
+    font-size: 0.9rem;
+    padding: 10px 8px;
+  }
+
+  /* Optional grid layout for tip buttons */
+  .tip-selection-grid {
+    /* Example: grid-template-columns: repeat(2, 1fr); */
+    /* gap: 8px; */
+  }
+
+  /* Output labels */
+  .output-description .text-label,
+  .output-description .per-person-label {
+    font-size: 0.8rem;
+  }
+
+  /* Output values */
+  #tip-amount-display,
+  #total-amount-display {
+    font-size: 1.75rem;
+  }
+
+  /* Reset button */
+  #reset-button {
+    font-size: 1rem;
+    padding: 12px 15px;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
